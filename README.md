@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1e3a8a,100:0ea5e9&height=180&section=header&text=Haeseok%20Park&fontSize=42&fontColor=ffffff&fontAlignY=36&desc=Backend%20Developer%20%C2%B7%20Spring%20Boot%20%C2%B7%20AI%20%26%20Data&descSize=16&descAlignY=58" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1e3a8a,100:0ea5e9&height=180&section=header&text=Haeseok%20Park&fontSize=42&fontColor=ffffff&fontAlignY=36&desc=Backend%20Developer%20-%20Spring%20Boot%2C%20AI%20and%20Data&descSize=16&descAlignY=58" width="100%" />
 
 ### 안녕하세요, 백엔드 개발자 박해석입니다 👋
 
@@ -105,17 +105,6 @@
 **멋쟁이사자처럼 한동대학교: 백엔드 멘토**
 - Spring Boot 프로젝트 구조, CRUD API 구현 실습 지도
 - Postman API 테스트, GitHub 협업(브랜치 · PR · 충돌 해결) 안내
-
-<br/>
-
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=HaeseokPark&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="165"/>
-<img src="https://streak-stats.demolab.com?user=HaeseokPark&theme=tokyonight&hide_border=true" height="165"/>
-
-</div>
 
 <br/>
 

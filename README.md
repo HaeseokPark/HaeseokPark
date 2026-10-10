@@ -1,6 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1e3a8a,100:0ea5e9&height=180&section=header&text=Haeseok%20Park&fontSize=42&fontColor=ffffff&fontAlignY=36&desc=Backend%20Developer%20-%20Spring%20Boot%2C%20AI%20and%20Data&descSize=16&descAlignY=58" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1e3a8a,100:0ea5e9&height=140&section=header" width="100%" />
+
+# Haeseok Park
+
+**Backend Developer · Spring Boot · AI & Data**
 
 ### 안녕하세요, 백엔드 개발자 박해석입니다 👋
 

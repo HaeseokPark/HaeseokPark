@@ -90,11 +90,28 @@
 
 <br/>
 
+### 🚶 [FeelRoute](https://github.com/HaeseokPark/feelRoute): 나에게 편한 보행 경로 비교
+> 개인 프로젝트 · 2026.08 · 포항 북구 생활권 보행 그래프(구간 20,034) + 고도 데이터 · 테스트 32개
+
+최단 경로 옆에 계단·오르막·횡단보도를 덜 지나는 대안을 보여주고, **몇 m 더 걷고 상승고도가 몇 m 줄었는지** 근거를 함께 제시합니다.
+
+| 고민한 문제 | 해결 |
+|---|---|
+| 우회 한도 안의 저비용 후보가 일반 A*에서 버려짐 | (거리, 비용) **비지배 라벨을 유지하는 다중 기준 탐색** |
+| 지도에서 찍은 위치가 선분 중간 | 선분 투영 후 **임시 노드로 분할**, 고도도 해당 부분만 계산 |
+| 고도 결측을 평지로 오인 | HGT 직접 해석·보간, 결측·교량·터널은 **"경사 미확인"으로 분리 집계** |
+| 사용자 위치 노출 | 경로 계산을 **브라우저 Web Worker**에서 수행, 좌표를 서버로 보내지 않음 |
+
+`TypeScript` `React 19` `Leaflet` `Web Worker` `OpenStreetMap` `SRTM/HGT` `Node test runner`
+
+<br/>
+
 ## 📂 Projects
 
 | 프로젝트 | 설명 | 역할 | 기간 |
 |---|---|---|---|
 | 🎵 [**SoundMap**](https://github.com/HaeseokPark/Soundmap) | 위치 기반 음악 소셜 플랫폼 | 개인 · 풀스택 · 배포 | 2026.09 – |
+| 🚶 [**FeelRoute**](https://github.com/HaeseokPark/feelRoute) | 계단·오르막·횡단보도를 덜 지나는 "편한 보행 경로"를 최단 경로와 비교 (포항, OSM + 고도) | 개인 · 경로 알고리즘 · 데이터 파이프라인 | 2026.08 |
 | 💧 [**애원해서**](https://github.com/LikeLionHGU/Aewonhaeseok-Back) | 수질 데이터 표준화 + 기업용 Open API (자동 매핑률 98.2%) | 백엔드 | 2026.08 |
 | 🍎 [**HipApple**](https://github.com/LikeLionHGU/HipApple_Backend) | 경락 데이터·예측 모델 기반 사과 출하 시점 추천 AI | 백엔드 (Spring + FastAPI) | 2026.07 – 08 |
 | 📈 [**경제듀오링고**](https://github.com/HaeseokPark/econo_up_Backend) | 게임화된 경제 학습 서비스, 20여 개 도메인 | 외주 · 백엔드 단독 | 2026.06 |

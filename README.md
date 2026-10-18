@@ -22,6 +22,7 @@
 - 🎓 **AI컴퓨터공학심화** 전공
 - 🛠 **Spring Boot REST API 설계**와 **JPA 데이터 모델링**이 주 영역
 - 🔐 인증 · 실시간 통신 · 위치 데이터 조회처럼 **성능과 안전성을 함께 고민해야 하는 문제**를 다룹니다
+- 📏 추천 품질은 NDCG로, 응답 속도는 p95로: **개선을 측정하고 근거를 남깁니다**
 - 🦁 **멋쟁이사자처럼 한동대 백엔드 멘토**: 아는 것을 설명할 수 있는 것으로 바꾸는 훈련
 - 🌱 백엔드 역량을 바탕으로 **AI와 데이터로 실질적 가치를 주는 서비스**를 만들고 싶습니다
 
@@ -33,6 +34,7 @@
 <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
 <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=databricks&logoColor=white"/>
 
 **Backend**<br/>
@@ -48,12 +50,14 @@
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
 <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"/>
 <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white"/>
+<img src="https://img.shields.io/badge/Flyway-CC0200?style=for-the-badge&logo=flyway&logoColor=white"/>
 
 **Infra / DevOps**<br/>
 <img src="https://img.shields.io/badge/AWS%20Lightsail-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white"/>
 <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
 <img src="https://img.shields.io/badge/nginx-009639?style=for-the-badge&logo=nginx&logoColor=white"/>
 <img src="https://img.shields.io/badge/Let's%20Encrypt-003A70?style=for-the-badge&logo=letsencrypt&logoColor=white"/>
+<img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white"/>
 
 **AI / Data**<br/>
 <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
@@ -73,6 +77,23 @@
 <br/>
 
 ## 🚀 Featured Project
+
+### ☕ [Beanote](https://github.com/HaeseokPark/beannote): 원두 취향 추천 + 시음 노트
+> 개인 프로젝트 · 2026.10 – · **기획서 작성부터, 추천 품질을 기준선과 비교해 숫자로 검증**
+
+마신 커피의 맛을 기록하면 취향을 숫자로 보여주고, 다음에 마실 원두를 **이유와 함께** 추천하는 서비스입니다.
+
+| 고민한 문제 | 해결 |
+|---|---|
+| 가상 데이터로 평가하면 콘텐츠 기반이 당연히 이기는 순환 평가 | 벡터 밖 숨은 요인을 넣은 가상 데이터 + 시간순 홀드아웃, **인기순 대비 NDCG@10 +111%** |
+| 협업 필터링이 예상보다 강하게 나온 결과 | 숨은 요인 제거 실험으로 **코사인이 "가운데 선호"를 표현하지 못하는 구조적 원인** 확인·기록 |
+| 평점을 짜게/후하게 주는 사람의 취향 비교 | (평점 − 본인 평균) × 주간 감쇠로 **평점 기준 보정**, 규칙을 단위 테스트로 고정 |
+| LLM 없이 추천 이유 만들기 | 유사도를 **차원별 기여도로 분해** → 템플릿 문장 (재현 가능 · 테스트 가능) |
+| 추천 API 응답 속도 | 원두·사용자 1,000명 기준 **p95 65.6ms**, 캐시는 트랜잭션 커밋 후 무효화 |
+
+`Java 21` `Spring Boot 4` `Spring Security` `MySQL 8` `Flyway` `Caffeine` `React 19` `TypeScript` `GitHub Actions` `테스트 115개`
+
+<br/>
 
 ### 🎵 [SoundMap](https://github.com/HaeseokPark/Soundmap): 위치 기반 음악 소셜 플랫폼
 > 개인 프로젝트 · 2026.09 – · **기획부터 배포까지 혼자, 실제 운영 중** → [soundmap.duckdns.org](https://soundmap.duckdns.org)
@@ -110,6 +131,7 @@
 
 | 프로젝트 | 설명 | 역할 | 기간 |
 |---|---|---|---|
+| ☕ [**Beanote**](https://github.com/HaeseokPark/beannote) | 원두 취향 추천 + 시음 노트, 콘텐츠 기반 + 협업 필터링 · 오프라인 평가 | 개인 · 기획 · 백엔드 · 추천 · 프론트 | 2026.10 – |
 | 🎵 [**SoundMap**](https://github.com/HaeseokPark/Soundmap) | 위치 기반 음악 소셜 플랫폼 | 개인 · 풀스택 · 배포 | 2026.09 – |
 | 🚶 [**FeelRoute**](https://github.com/HaeseokPark/feelRoute) | 계단·오르막·횡단보도를 덜 지나는 "편한 보행 경로"를 최단 경로와 비교 (포항, OSM + 고도) | 개인 · 경로 알고리즘 · 데이터 파이프라인 | 2026.08 |
 | 💧 [**애원해서**](https://github.com/LikeLionHGU/Aewonhaeseok-Back) | 수질 데이터 표준화 + 기업용 Open API (자동 매핑률 98.2%) | 백엔드 | 2026.08 |
